@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install default-jre default-jdk vim gradle yarn jq moreutils
+apt install vim gradle yarn jq moreutils
 npm cache clean -f 
 npm install -g n
 npm i -g npm
@@ -42,9 +42,8 @@ echo "check ./sdkmanager --list for more package"
 
 
 
-echo "INSTALLING REACT NATIVE & EXPO.IO"
+echo "INSTALLING REACT NATIVE"
 npm install -g react-native-cli
-npm install -g expo-cli
 
 echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android"
 echo "Enjoy your Tools :)"
