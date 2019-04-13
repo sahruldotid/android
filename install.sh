@@ -23,6 +23,8 @@ chmod +x /usr/local/bin/build
 
 
 echo "INSTALLING ANDROID"
+wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O /tmp/sdk.zip
+unzip /tmp/sdk.zip -d /opt/android
 export ANDROID_HOME=/opt/android
 echo "export ANDROID_HOME=/opt/android" >> ~/.bashrc
 
@@ -32,9 +34,10 @@ export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 yes | /opt/android/tools/bin/sdkmanager --licenses
 
 
-echo "INSTALLING REACT NATIVE"
+echo "INSTALLING REACT NATIVE & EXPO"
 npm install -g react-native-cli
+npm install -g expo-cli
 
 
-echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android"
+echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android using expo"
 echo "Enjoy your Tools :)"
