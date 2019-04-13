@@ -1,2 +1,2 @@
 # android
-React Native &amp; Expo Installer
+React Native Installer
