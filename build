@@ -1,4 +1,5 @@
 #!/bin/bash
+keytool -genkeypair -v -keystore syahrul.keystore -alias syahrul -keyalg RSA -keysize 2048 -validity 10000
 npm run-script buildRelease
 npm run-script sign
 npm run-script zip
