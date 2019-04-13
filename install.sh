@@ -16,7 +16,7 @@ ln -sf /usr/local/n/versions/node/10.15.3/bin/node /usr/bin/node
 
 echo "COPYING COMPILER SCRIPT"
 cp inject /usr/local/bin
-cp build /url/local/bin
+cp build /usr/local/bin
 chmod +x /usr/local/bin/inject
 chmod +x /usr/local/bin/build
 
