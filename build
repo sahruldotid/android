@@ -3,4 +3,4 @@ keytool -genkeypair -v -keystore syahrul.keystore -alias syahrul -keyalg RSA -ke
 cd android && ./gradlew clean && ./gradlew assembleRelease
 cd ..
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore syahrul.keystore android/app/build/outputs/apk/release/app-release-unsigned.apk syahrul
-/opt/android/build-tools/*/zipalign -v 4 android/app/build/outputs/apk/app-release-unsigned.apk android/app/build/outputs/apk/app-release.apk
+/opt/android/build-tools/*/zipalign -v 4 android/app/build/outputs/apk/release/app-release-unsigned.apk app-release.apk
