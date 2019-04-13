@@ -36,7 +36,7 @@ yes | /opt/android/tools/bin/sdkmanager --licenses
 
 echo "INSTALLING REACT NATIVE & EXPO"
 npm install -g react-native-cli
-npm install -g expo-cli
+
 
 
 echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android using expo"
