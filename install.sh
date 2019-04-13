@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install default-jre default-jdk vim gradle yarn
+apt install default-jre default-jdk vim gradle yarn jq moreutils
 npm cache clean -f 
 npm install -g n
 npm i -g npm
@@ -14,11 +14,18 @@ n stable
 ln -sf /usr/local/n/versions/node/10.15.3/bin/node /usr/bin/node
 
 
+echo "COPYING COMPILER SCRIPT"
+cp inject /usr/local/bin
+cp build /url/local/bin
+chmod +x /usr/local/bin/inject
+chmod +x /usr/local/bin/build
+
 
 
 echo "INSTALLING ANDROID"
 wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O /tmp/sdk.zip
 unzip /tmp/sdk.zip -d /opt/android
+rm /tmp/sdk.zip
 export ANDROID_HOME=/opt/android
 echo "export ANDROID_HOME=/opt/android" >> ~/.bashrc
 
