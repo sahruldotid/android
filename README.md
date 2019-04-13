@@ -6,4 +6,3 @@ React Native Installer
 - cd android
 - chmod +x *
 - source install.sh
-- ./install.sh
