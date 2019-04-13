@@ -1,11 +1,8 @@
-#Android
+# Android
 React Native Installer
 
 # How To Use
-`
-git clone https://github.com/sahruldotid/android.git
-cd android
-chmod +x *
-./install.sh
-
-`
+- git clone https://github.com/sahruldotid/android.git
+- cd android
+- chmod +x *
+- ./install.sh
