@@ -1,0 +1,6 @@
+#!/bin/bash
+jq --arg buildDebug "(cd android && ./gradlew clean && ./gradlew assembleDebug)" '.scripts += {buildDebug: $buildDebug}' package.json | sponge package.json
+jq --arg buildRelease "(cd android && ./gradlew clean && ./gradlew assembleRelease)" '.scripts += {buildRelease: $buildRelease}' package.json | sponge package.json
+jq --arg sign "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore dcash.keystore android/app/build/outputs/apk/app-release-unsigned.apk alias_name" '.scripts += {sign: $sign}' package.json | sponge package.json
+jq --arg zip "/opt/android/build-tools/*/zipalign -v 4 android/app/build/outputs/apk/app-release-unsigned.apk android/app/build/outputs/apk/app-release.apk" '.scripts += {zip: $zip}' package.json | sponge package.json
+jq . package.json
