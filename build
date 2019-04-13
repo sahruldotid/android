@@ -1,0 +1,4 @@
+#!/bin/bash
+npm run-script buildRelease
+npm run-script sign
+npm run-script zip
