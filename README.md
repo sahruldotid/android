@@ -1,5 +1,5 @@
 # Android
-React Native & Expo Installer
+React Native Installer
 
 # How To Use
 - git clone https://github.com/sahruldotid/android.git
