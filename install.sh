@@ -2,7 +2,7 @@
 
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install default-jre default-jdk vim
+apt install default-jre default-jdk vim gradle
 npm cache clean -f 
 npm install -g n
 npm i -g npm
