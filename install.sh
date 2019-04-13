@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install vim gradle yarn jq moreutils
+apt install vim yarn jq moreutils
 npm cache clean -f 
 npm install -g n
 npm i -g npm
@@ -23,9 +23,6 @@ chmod +x /usr/local/bin/build
 
 
 echo "INSTALLING ANDROID"
-wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O /tmp/sdk.zip
-unzip /tmp/sdk.zip -d /opt/android
-rm /tmp/sdk.zip
 export ANDROID_HOME=/opt/android
 echo "export ANDROID_HOME=/opt/android" >> ~/.bashrc
 
@@ -35,15 +32,9 @@ export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 yes | /opt/android/tools/bin/sdkmanager --licenses
 
 
-
-echo "INSTALLING ANDROID NOUGAT"
-echo "check ./sdkmanager --list for more package"
-/opt/android/tools/bin/sdkmanager "platforms;android-25" "build-tools;25.0.1" "add-ons;addon-google_apis-google-24"
-
-
-
 echo "INSTALLING REACT NATIVE"
 npm install -g react-native-cli
+
 
 echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android"
 echo "Enjoy your Tools :)"
