@@ -1,8 +1,12 @@
 #!/bin/bash
 
+echo "ADD YARN REPO"
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install default-jre default-jdk vim gradle
+apt install default-jre default-jdk vim gradle yarn
 npm cache clean -f 
 npm install -g n
 npm i -g npm
