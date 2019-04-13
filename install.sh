@@ -6,7 +6,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 echo "UPGRADING NODEJS & NPM"
 apt update
-apt install vim yarn jq moreutils
+apt install vim yarn jq
 npm cache clean -f 
 npm install -g n
 npm i -g npm
