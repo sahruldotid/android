@@ -39,5 +39,4 @@ npm install -g react-native-cli
 
 
 
-echo "DISCLAIMER: DONT FORGET TO CHANGE app.json when build android using expo"
 echo "Enjoy your Tools :)"
