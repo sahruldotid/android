@@ -30,7 +30,6 @@ echo "export ANDROID_HOME=/opt/android" >> ~/.bashrc
 
 
 echo "SETTING PERMISSION LICENSE"
-export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 yes | /opt/android/tools/bin/sdkmanager --licenses
 
 
